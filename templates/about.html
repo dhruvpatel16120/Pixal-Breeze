@@ -1,0 +1,212 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}About{% endblock title %}
+{% block social %}
+{% for k in link %}
+<a href="{{k.link}}" class="{{k.title}}"><i class="{{k.icon}}"></i></a>
+{% endfor %}
+{% endblock social %}
+{% block content %}
+
+
+<main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>About Us</h2>
+          <ol>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li>About Us</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= About Section ======= -->
+    <section class="about" data-aos="fade-up">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid mt-4" alt="">
+            <img src="{% static 'assets/img/about-2.jpg' %}" class="img-fluid mt-4" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p class="fst-italic">
+              <h2>*Our Journey*</h2>
+
+<p>PixalBreeze embarked on its digital voyage in 2023 . What started as a vision for innovative solutions has evolved into a thriving hub of technology and creativity. Over the years, we've sculpted our path by delivering excellence in every project we undertake. Our journey is marked by the trust of our clients, the dedication of our team, and a commitment to staying at the forefront of the digital landscape.</p>
+
+<h2>*About PixalBreeze*</h2>
+
+<p>PixalBreeze is a dynamic IT solutions provider dedicated to transforming ideas into reality. We specialize in web development, creative design, and secure data management. Our mission is to empower businesses with cutting-edge technology, helping them thrive in the digital era. Whether it's crafting stunning websites, securing crucial data, or providing 24/7 customer support, we are your partners in success.</p>
+
+<h2>*Meet Our CEO: Dhruv Patel*</h2>
+
+<p>Our visionary leader, Dhruv Patel, is the driving force behind PixalBreeze's success. With a background in Information Technology and expertise in PHP, HTML, CSS, JavaScript, Flask, Django, C, and MySQL database, Dhruv ensures that innovation and efficiency are at the heart of our operations. His leadership inspires our team to push boundaries and achieve excellence.</p>
+
+<h2>*The PixalBreeze Team*</h2>
+
+<p>At PixalBreeze, we believe in the power of collaboration. Our team is a diverse group of professionals, each with their unique expertise. From web developers and designers to data security experts and customer support champions, every member plays a vital role in our success story. Together, we create digital experiences that leave a lasting impact.Our 
+  team Member are <strong>Parv Patel , Ravi Patel</strong> .
+</p>
+
+<h3>Join us in our journey to redefine digital innovation. We're not just a company; we're a community of innovators, creators, and problem solvers. Together, we're shaping the digital future.</h3>
+
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <section class="facts section-bg" data-aos="fade-up">
+      <div class="container">
+
+        <div class="row counters">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="22" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Clients</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="28" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Projects</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="163" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Hours Of Support</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Hard Workers</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Facts Section -->
+
+    <!-- ======= Our Skills Section ======= -->
+    <section class="skills" data-aos="fade-up">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Our Skills</h2>
+          <p>At PixalBreeze , we take immense pride in our dedicated and highly skilled team of professionals. Our team members are not just employees; they are the driving force behind our success. With a diverse range of talents and expertise, we bring a wealth of knowledge and experience to the table.</p>
+        </div>
+
+        <div class="skills-content">
+
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">HTML <i class="val">100%</i></span>
+            </div>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">CSS <i class="val">85%</i></span>
+            </div>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">Bootstrap <i class="val">95%</i></span>
+            </div>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">Django <i class="val">85%</i></span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Our Skills Section -->
+
+    <!-- ======= Tetstimonials Section ======= -->
+    <section class="testimonials" data-aos="fade-up">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Tetstimonials</h2>
+          <p>At PixalBreeze, we take immense pride in our commitment to excellence. Our team, led by the exceptionally talented Dhruv Patel, residing in RC Technical Institute Boy's Hostel, is dedicated to transforming your digital aspirations into reality. We've had the privilege of serving numerous clients who have shared their experiences with us. Here are some heartfelt testimonials from our satisfied clients:
+          </p>
+        </div>
+
+        <div class="testimonials-carousel swiper">
+          <div class="swiper-wrapper">
+            <div class="testimonial-item swiper-slide">
+              <img src="{% static 'assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+              <h3> John Smith</h3>
+              <h4>Chief Marketing Officer, XYZ Corporation</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Working with PixalBreeze has been a game-changer for our company. Dhruv Patel's technical prowess and friendly nature made the entire process a breeze. The results exceeded our expectations!
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+
+            <div class="testimonial-item swiper-slide">
+              <img src="{% static 'assets/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+              <h3>Angela Johnson</h3>
+              <h4> Founder, Creative Innovations</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                PixalBreeze turned our website vision into a stunning reality. Dhruv Patel's expertise in PHP, HTML, CSS, and more was evident throughout the project. We couldn't be happier with the outcome.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+
+            <div class="testimonial-item swiper-slide">
+              <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
+              <h3> Lisa Anderson</h3>
+              <h4> Director of IT, TechPro Solutions</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                I highly recommend PixalBreeze for web development projects. Dhruv Patel's knowledge of Flask, Django, and MySQL database impressed us, and the project was delivered on time with flawless execution.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+
+            <div class="testimonial-item swiper-slide">
+              <img src="{% static 'assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
+              <h3>Michael Lee</h3>
+              <h4> Startup Enthusiast</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Dhruv Patel and his team at PixalBreeze are the go-to experts for startups. Their proficiency in C programming helped us create a robust backend for our application. They are simply outstanding.
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+
+            <div class="testimonial-item swiper-slide">
+              <img src="{% static 'assets/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
+              <h3>Emily Lewis</h3>
+              <h4>Small Business Owner</h4>
+              <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                Choosing PixalBreeze was one of the best decisions for my business. Dhruv Patel's mastery of web technologies like CSS and HTML gave my website a fresh and modern look. I'm thrilled with the results!
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+              </p>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Ttstimonials Section -->
+
+  </main><!-- End #main -->
+{% endblock content %}

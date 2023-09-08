@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block social %}
+{% for k in link %}
+<a href="{{k.link}}" class="{{k.title}}"><i class="{{k.icon}}"></i></a>
+{% endfor %}
+{% endblock social %}
+{% block content %}
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Welcome To <span>Pixal Breeze</span></h2>
+          <p class="animate__animated animate__fadeInUp">Discover A World Of Innovation In Web Devlopment And Design With Pixal Breeze .Explore The Digital World With Us. We Bring Your Ideas To Life !</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Empowering With Technology</h2>
+          <p class="animate__animated animate__fadeInUp">At Pixal Breeze , We Harness The Power Of PHP , HTML,CSS , JavaScript ,FLask , Django,C And MYSQL To Craft Cutting-Edge Solutions For You.</p>     
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Cool & Clever Solutions</h2>
+          <p class="animate__animated animate__fadeInUp">Stay Ahead With Cool And Clever Digital Solutions That Solve Real-World Challenges.PixalBreeze Is Your Partner In Progress.</p>   
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Web Devlopment Mastery</h2>
+          <p class="animate__animated animate__fadeInUp">Discover The Art Of Web Devlopment With Our Experts . At Pixal Breeze , We Craft Websites That Not Only Look Stunning But Also Function Flawlessly !</p>       
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Unleash Creativity</h2>
+          <p class="animate__animated animate__fadeInUp">Join Us In Exploring The World Of Creativity Our Team Combines Design And Technology To Deliver Captivating Digital Experiences</p>
+        </div>
+      </div>
+
+      <!-- Slide 6 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Contact Us Today</h2>
+          <p class="animate__animated animate__fadeInUp">Ready To Embark On A Digital Journey ? Get In Touch With PixalBreeze Now , And Let's Turn Your Ideas Into Reality.Your Satisfaction Is Our Top Priority !</p>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Services Section ======= -->
+    <section class="services">
+      <div class="container">
+
+        <div class="row">
+          {% for i in data  %}
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="icon-box icon-box-pink">
+              <div class="icon"><i class="{{ i.icon}}"></i></div>
+              <h4 class="title"><a href="">{{ i.title }}</a></h4>
+              <p class="description">{{i.desc}}</p>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6 video-box">
+            <img src="{% static 'assets/img/bg4.jpg' %}" class="img-fluid" alt="">
+            <a href="{% url 'portfolio' %}" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+          </div>
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
+
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-lock"></i></div>
+              <h4 class="title"><a>Security</a></h4>
+              <p class="description">We Prioritize The Security Of Your Data And online Presence.</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bi-rocket"></i></div>
+              <h4 class="title"><a>Speed & Efficiency</a></h4>
+              <p class="description">We Deliver Blazing Fast Solutions With Utmost Efficiency,Helping You Stay Ahead Of The Competition.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section class="features">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Explore Our Features</h2>
+          <p>Welcome To Pixal Breeze, Where Innovation Meets Excellence.We Take Pride In Offering A Range Of Powerful Features That Set Us Apart.Explore What Makes Us Your Ideal Choice Below :</p>
+        </div>
+        
+        {% for j in data2 %}
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-5">
+            <img src="/media/{{j.img}}" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 pt-5">
+            <h3>{{j.title}}</h3>
+            <p>{{j.desc}}</p>
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+    </section><!-- End Features Section -->
+
+  </main><!-- End #main -->
+ 
+{% endblock content %}

@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Services{% endblock title %}
+{% block social %}
+{% for k in link %}
+<a href="{{k.link}}" class="{{k.title}}"><i class="{{k.icon}}"></i></a>
+{% endfor %}
+{% endblock social %}
+{% block content %}
+
+  <main id="main">
+
+    <!-- ======= Our Services Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Our Services</h2>
+          <ol>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li>Our Services</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Our Services Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section class="services">
+      <div class="container">
+
+        <div class="row">
+
+            {% for i in service  %}
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+              <div class="icon-box icon-box-pink">
+                <div class="icon"><i class="{{ i.icon}}"></i></div>
+                <h4 class="title"><a href="">{{ i.title }}</a></h4>
+                <p class="description">{{i.desc}}</p>
+              </div>
+            </div>
+            {% endfor %}
+  
+          </div>
+  
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+    <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
+      <div class="container">
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
+
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-lock"></i></div>
+              <h4 class="title"><a>Security</a></h4>
+              <p class="description">We Prioritize The Security Of Your Data And online Presence.</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bi-briefcase"></i></div>
+              <h4 class="title"><a>Professional exportise</a></h4>
+              <p class="description">Our Team Of Experts Brings Years Of Experience To Deliver Top Notch Solutions.</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-palette"></i></div>
+              <h4 class="title"><a>creative Design</a></h4>
+              <p class="description">We Combine Creativity And Innovation To Craft Visually Stunning Designs</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bi-rocket"></i></div>
+              <h4 class="title"><a>Speed & Efficiency</a></h4>
+              <p class="description">We Deliver Blazing Fast Solutions With Utmost Efficiency,Helping You Stay Ahead Of The Competition.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Service Details Section ======= -->
+    <section class="service-details">
+      <div class="container">
+
+        <div class="row">
+         {% for j in card  %}
+         
+         <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+           <div class="card">
+             <div class="card-img">
+               <img src="/media/{{j.img}}" class="img-fluid" alt="">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="#">{{ j.title }}</a></h5>
+                <p class="card-text">{{j.desc}}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+
+      </div>
+    </section><!-- End Service Details Section -->
+
+   
+  </main><!-- End #main -->
+
+{% endblock content %}
