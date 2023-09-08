@@ -147,6 +147,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_ROOT = BASE_DIR/"media"
 MEDIA_URL = "/media/"
 
+# static files
+STATICFILES_DIRS = [
+    BASE_DIR,"static"
+]
 
 # gmail 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -156,6 +160,6 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'pixalbreezeitservices@gmail.com'
 EMAIL_HOST_PASSWORD = 'rvsxihvliqlwmdcz'
 
-import os
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+# import os
+# STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
