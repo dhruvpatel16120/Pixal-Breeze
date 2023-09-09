@@ -1,27 +1,14 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "Pixal_Breeze/wsgi.py",
-      "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
-    },
-    {
-      "src": "build_files.sh",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "staticfiles_build"
+    "builds": [
+      {
+        "src": "Pixal_Breeze/wsgi.py",
+        "use": "@vercel/python"
       }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "Pixal_Breeze/wsgi.py"
-    }
-  ]
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "Pixal_Breeze/wsgi.py"
+      }
+    ]
 }
