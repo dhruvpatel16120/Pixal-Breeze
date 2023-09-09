@@ -33,8 +33,8 @@ ALLOWED_HOSTS = ['.vercel.app', '.now.sh','pixal-breeze.onrender.com' , '127.0.0
 
 INSTALLED_APPS = [
     # admin-pannel apps
-    'admin_interface',
-    'colorfield',
+    #'admin_interface',
+    #'colorfield',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
