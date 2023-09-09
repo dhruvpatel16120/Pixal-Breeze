@@ -160,6 +160,6 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'pixalbreezeitservices@gmail.com'
 EMAIL_HOST_PASSWORD = 'rvsxihvliqlwmdcz'
 
-# import os
-# STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+import os
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
