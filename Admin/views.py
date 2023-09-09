@@ -41,24 +41,25 @@ def contact(request):
         data3.save()
 
         # mail
-        subject = 'PixalBreeze - Your Form Has Submitted'
+        sub = 'PixalBreeze - Your Form Has Submitted'
         message = f'''Hello {name} ,
+
 Welcome To Pixal Breeze IT Services,I hope Your are Fine !
 
-    recently,You Visit Our site PixalBreeze And send Your opinion with this details :
+Recently,You Visit Our site PixalBreeze And send Your opinion with this details :
         1. Name : {name}
         2. Email : {email}
         3. Contact No. : {phone}
         4. subject : {subject}
         5. Message : {desc}
 
-    Thanks For Feedback ! Our Customer expert send you Replay mail Very Soon and Answer Your Message very Short time !
+Thanks For Feedback ! Our Customer expert send you Replay mail Very Soon and Answer Your Message very Short time !
 
 Thanks For Visit PixalBreeze !
         '''
         email_from = settings.EMAIL_HOST_USER
         recipient_list = [email]
-        send_mail( subject, message, email_from, recipient_list )
+        send_mail(sub, message, email_from, recipient_list )
 
         messages.success(request,"Form Has Been Submitted !!!")
         
