@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render
 from django.contrib import messages
 from datetime import datetime
 from Admin.models import Contact,Service,Feature,Social_Links,Card,Team,Portfolio

@@ -27,14 +27,14 @@ SECRET_KEY = 'django-insecure-mdnmnpndfl(==d2$0481m@ib@y9$%bh1w57v4#c(2-^(m+vhn^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh','pixal-breeze.onrender.com' , '127.0.0.1','localhost' ]
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
 INSTALLED_APPS = [
     # admin-pannel apps
-    #'admin_interface',
-    #'colorfield',
+    'admin_interface',
+    'colorfield',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -89,12 +89,12 @@ WSGI_APPLICATION = 'Pixal_Breeze.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': "db.lfvomqrzozxnfyzezxop.supabase.co",
-        'NAME': "postgres",
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': "viaduct.proxy.rlwy.net",
+        'NAME': "railway",
         'USER': "postgres",
-        'PASSWORD': "dhruv@admin26",
-        'PORT': "5432",
+        'PASSWORD': "dab2gFC64ab2cc1163fG55BfeDAD-F*E",
+        'PORT': "29003",
 
     }
 }
@@ -161,5 +161,4 @@ EMAIL_HOST_USER = 'pixalbreezeitservices@gmail.com'
 EMAIL_HOST_PASSWORD = 'rvsxihvliqlwmdcz'
 
 import os
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
