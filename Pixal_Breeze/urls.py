@@ -22,7 +22,7 @@ from Admin import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
-    path('ladmin/', admin.site.urls),
+    path('admin-a/', admin.site.urls),
     path("",views.home, name="home"),
     path('about/',views.about,name="about"),
     path('service/',views.service,name="service"),
