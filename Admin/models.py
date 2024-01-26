@@ -12,7 +12,7 @@ class Service(models.Model):
     
 class Feature(models.Model):
     title = models.CharField(max_length=50)
-    img = models.FileField(upload_to='img/', max_length=100)
+    img = models.CharField(max_length=50)
     desc = models.TextField()
     date = models.DateField(auto_now_add=True)
 
@@ -47,7 +47,7 @@ class Team(models.Model):
     twitter = models.CharField(max_length=150)
     linkedin = models.CharField(max_length=150)
     desc = models.TextField()
-    img = models.FileField(upload_to='team/', max_length=100)
+    img = models.CharField(max_length=50)
 
     def __str__(self):
         return self.name
@@ -55,7 +55,7 @@ class Team(models.Model):
 class Card(models.Model):
     title = models.CharField(max_length=50)
     desc = models.TextField()
-    img = models.FileField(upload_to='card/', max_length=100)
+    img = models.CharField(max_length=50)
 
     def __str__(self):
         return self.title
