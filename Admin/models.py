@@ -62,7 +62,7 @@ class Card(models.Model):
 
 class Portfolio(models.Model):
     title = models.CharField( max_length=50)
-    img = models.FileField(upload_to='portfolio/', max_length=100)
+    img = models.CharField(max_length=50)
     cat = models.CharField(max_length=20)
     
     def __str__(self):
